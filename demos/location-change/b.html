@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B</title>
+</head>
+<body>
+    <h3>B</h3>
+    <button id="bButton">Go to B</button>
+    <a href="b.html">Got to B link</a>
+    <script>
+        "use strict";
+        let bButton = document.getElementById("bButton")
+
+        function goToB() {
+            bButton.onclick = goToB
+        }
+
+
+    </script>
+</body>
+</html>
