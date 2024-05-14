@@ -16,14 +16,14 @@ let products = [
    ];
 
 // Which candies costs less than $4.00? 
-let productCost = products.filter((product) => product.price <= 4).forEach((product) => console.log( `${product.product } price: ${product.price}`));
+let productCost = products.filter((p) => p.price <= 4).forEach((product) => console.log( `${product.product } price: ${product.price}`));
 
 // console.log(productCost);
 
 // Which candies has "M&M" its name?
-let candyMm = products.filter((item) => item.product.indexOf("M&M") !=-1);
+let candyMm = products.filter((i) => i.product.indexOf("M&M") !=-1);
 console.log(candyMm);
 
 // Do we carry "Swedish Fish"?
-let candyName = products.find((product) => product.product.indexOf("Swedish Fish") !=-1);
+let candyName = products.find((p) => p.product.indexOf("Swedish Fish") !=-1);
 console.log(candyName);
