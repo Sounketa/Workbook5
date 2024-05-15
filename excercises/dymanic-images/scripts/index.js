@@ -48,6 +48,7 @@ let imageFiles = [
     path: "https://placehold.co/300x300",
     description: "placeholder 9",
   },
+
   {
     id: "10",
     path: "https://placehold.co/300x300",
@@ -55,12 +56,43 @@ let imageFiles = [
   },
 ];
 
-
-window.onload = function(){
+window.onload = function () {
   //get all html elements into variables
-
+  let imageContainer = document.querySelector("#imageContainer");
+  let addImageButton = document.querySelector("#addImageButton");
+  let clearImageButton = document.querySelector("#clearImageButton");
+  let imageList = document.querySelector("#imageList");
+  let imgDisplay = document.querySelector("#imgDisplay");
   //define  your functions
 
+  function setImage() {
+    for (const imageFile of imageFiles) {
+      let imageOption = document.createElement("option");
+      imageOption.value = imageFile.id;
+      imageOption.innerText = imageFile.description;
+      imageList.appendChild(imageOption);
+    }
+  }
+  function addImage() {
+    const id = imageList.value;
+    for (const imageFile of imageFiles) {
+      if (imageFile.id == id) {
+        let image = document.createElement("img");
+        image.src = imageFile.path;
+        image.alt = imageFile.description;
+        imgDisplay.appendChild(image);
+      }
+    }
+  }
+  function removeImages() {
+    imgDisplay.innerHTML = "";
+  }
 
+  function removeImage() {
+    imgDisplay.innerHTML = ""
+  }
+  addImageButton.onclick = addImage
+  clearImageButton.onclick = removeImage
   //associate your functions with html element events
-}
+  setImage();
+};
