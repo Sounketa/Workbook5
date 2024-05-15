@@ -24,9 +24,16 @@
 
     <script>
         "use strict";
-        let imageGroupDivs = document.querySelectorAll("imageGroup");
-        console.log(imageGroupDivs);
+        function () {
 
+        // let imageGroupDivs = document.querySelector("imageGroup");
+       
+        for (const imageGroupDivs of imageGroup) {
+        imageGroup.style.border = "1px solid red";
+        imageGroup.style.padding = "1rem";
+      }
+        
+        }
 
     </script>
 </body>
