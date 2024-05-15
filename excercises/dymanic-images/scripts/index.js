@@ -89,10 +89,10 @@ window.onload = function () {
   }
 
   function removeImage() {
-    imgDisplay.innerHTML = ""
+    imgDisplay.innerHTML = "";
   }
-  addImageButton.onclick = addImage
-  clearImageButton.onclick = removeImage
+  addImageButton.onclick = addImage;
+  clearImageButton.onclick = removeImage;
   //associate your functions with html element events
   setImage();
 };
