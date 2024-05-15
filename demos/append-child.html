@@ -3,14 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+    
+</head> <title>Append Child</title>
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic"
+/>
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
+/>
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css"
+/>
+<style>
+    main{
+        padding: 5rem;
+    }
+
+    .image{
+        padding: 2rem;
+
+    }
+</style>
 <body>
     <main>
-        <div id="imageContainer"></div>
+        <div id="imageContainer">
+         <!-- <img src="https://placehold.co/200" alt="placeholder image"> -->
+        </div>
+        <button id="addImageButton">Add Image</button> 
     </main>
     <script>
         "use strict";
+
+         // when this runs you are guarenteed that allhtml elements have been loaded
+         window.onload = function () {
+
+         //get all your html elements 
+         let imageContainer = document.querySelector("#imageContainer")
+         let addImageButton = document.querySelector("#addImageButton")
+         
+         // define your function
+         function addImage() {
+          //create the child
+          let image = document.createElement("img");
+          image.src = "https://placehold.co/200";
+          image.alt = "placeholder image";
+          image.classList.add
+          //append the child into the parent(put into inside)
+          imagesContainer.appendChild(image);
+        }
+
+         // connect your function into the parent
+         addImageButton.onclick = addImage;
+        };
     </script>
 </body>
 </html>
