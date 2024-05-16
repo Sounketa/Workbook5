@@ -120,9 +120,15 @@ window.onload = function () {
   const peopleListingTblBody = document.querySelector("#peopleListingTblBody");
 
   //functions
+  
   function loadPeopleListingTable() {
     for (const person of people) {
-      let row = peopleListingTblBody.insertRow();
+        buildTableRow(person);
+    }
+  }
+
+  function buildTableRow(person) {
+    let row = peopleListingTblBody.insertRow();
 
       let cell1 = row.insertCell(0);
       cell1.innerText = person.id;
@@ -135,9 +141,7 @@ window.onload = function () {
 
       let cell4 = row.insertCell(3);
       cell4.innerText = person.ipAddress;
-    }
   }
-
   //event handling
 
   //initial loading
